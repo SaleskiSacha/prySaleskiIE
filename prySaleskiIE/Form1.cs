@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace prySaleskiIE
 {
-    public partial class frmMain : Form
+    public partial class Form1 : Form
     {
-        public frmMain()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login newobj = new Login();
-            newobj.ShowDialog();
         }
     }
 }
