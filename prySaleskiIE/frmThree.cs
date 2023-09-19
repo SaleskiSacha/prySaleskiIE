@@ -25,8 +25,9 @@ namespace prySaleskiIE
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
-            
+            frmPrincipal newobj = new frmPrincipal();
+            newobj.ShowDialog();
+
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
