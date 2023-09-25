@@ -27,5 +27,24 @@ namespace prySaleskiIE
             Login newobj = new Login();
             newobj.ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            progressBar1.Increment(5);
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                timer1.Stop();
+                this.Hide();
+                Login newobj = new Login();
+                newobj.ShowDialog();
+                
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,19 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.btnContinuar = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // btnContinuar
+            // progressBar1
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(260, 530);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(119, 29);
-            this.btnContinuar.TabIndex = 0;
-            this.btnContinuar.Text = "&Continuar";
-            this.btnContinuar.UseVisualStyleBackColor = true;
-            this.btnContinuar.Click += new System.EventHandler(this.button1_Click);
+            this.progressBar1.Location = new System.Drawing.Point(142, 529);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(357, 23);
+            this.progressBar1.TabIndex = 1;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMain
             // 
@@ -48,7 +53,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
             this.ClientSize = new System.Drawing.Size(649, 586);
-            this.Controls.Add(this.btnContinuar);
+            this.Controls.Add(this.progressBar1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "Inicio";
@@ -58,8 +63,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
