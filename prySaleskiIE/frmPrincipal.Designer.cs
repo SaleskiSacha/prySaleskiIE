@@ -31,8 +31,8 @@
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPrincipal = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,22 +61,22 @@
             // tsmPrincipal
             // 
             this.tsmPrincipal.Name = "tsmPrincipal";
-            this.tsmPrincipal.Size = new System.Drawing.Size(180, 22);
-            // 
-            // tsmConsulta
-            // 
-            this.tsmConsulta.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tsmConsulta.Name = "tsmConsulta";
-            this.tsmConsulta.Size = new System.Drawing.Size(162, 25);
-            this.tsmConsulta.Text = "Consulta de Artículo";
+            this.tsmPrincipal.Size = new System.Drawing.Size(70, 22);
             // 
             // tsmResultado
             // 
             this.tsmResultado.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tsmResultado.Name = "tsmResultado";
-            this.tsmResultado.Size = new System.Drawing.Size(132, 25);
-            this.tsmResultado.Text = "Inicio de Cliente";
+            this.tsmResultado.Size = new System.Drawing.Size(177, 25);
+            this.tsmResultado.Text = "Eliminar un Proveedor";
             this.tsmResultado.Click += new System.EventHandler(this.tsmResultado_Click);
+            // 
+            // tsmConsulta
+            // 
+            this.tsmConsulta.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tsmConsulta.Name = "tsmConsulta";
+            this.tsmConsulta.Size = new System.Drawing.Size(177, 25);
+            this.tsmConsulta.Text = "Registro de Proveedor";
             // 
             // frmPrincipal
             // 

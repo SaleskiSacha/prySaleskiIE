@@ -1,6 +1,6 @@
 ﻿namespace prySaleskiIE
 {
-    partial class frmMain
+    partial class frmPantalladeCarga
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantalladeCarga));
+            this.pgbCargar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // progressBar1
+            // pgbCargar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(142, 529);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(357, 23);
-            this.progressBar1.TabIndex = 1;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            this.pgbCargar.Location = new System.Drawing.Point(142, 529);
+            this.pgbCargar.Name = "pgbCargar";
+            this.pgbCargar.Size = new System.Drawing.Size(357, 23);
+            this.pgbCargar.TabIndex = 1;
+            this.pgbCargar.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // frmMain
+            // frmPantalladeCarga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
             this.ClientSize = new System.Drawing.Size(649, 586);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pgbCargar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmMain";
+            this.Name = "frmPantalladeCarga";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
@@ -63,7 +63,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pgbCargar;
         private System.Windows.Forms.Timer timer1;
     }
 }

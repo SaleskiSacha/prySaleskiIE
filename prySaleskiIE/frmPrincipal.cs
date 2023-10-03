@@ -19,7 +19,7 @@ namespace prySaleskiIE
 
         private void tsmDatos_Click(object sender, EventArgs e)
         {
-            Form1 newobj = new Form1();
+            frmView newobj = new frmView();
             newobj.ShowDialog();
         }
 

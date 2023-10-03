@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace prySaleskiIE
 {
-    public partial class frmMain : Form
+    public partial class frmPantalladeCarga : Form
     {
-        public frmMain()
+        public frmPantalladeCarga()
         {
             InitializeComponent();
         }
@@ -31,8 +31,8 @@ namespace prySaleskiIE
         private void timer1_Tick(object sender, EventArgs e)
         {
             
-            progressBar1.Increment(5);
-            if (progressBar1.Value == progressBar1.Maximum)
+            pgbCargar.Increment(5);
+            if (pgbCargar.Value == pgbCargar.Maximum)
             {
                 timer1.Stop();
                 this.Hide();
