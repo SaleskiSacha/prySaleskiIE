@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPrincipal = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,7 @@
             this.tsmConsulta});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(628, 29);
+            this.mnsPrincipal.Size = new System.Drawing.Size(636, 29);
             this.mnsPrincipal.TabIndex = 1;
             this.mnsPrincipal.Text = "menuStrip1";
             // 
@@ -61,7 +62,7 @@
             // tsmPrincipal
             // 
             this.tsmPrincipal.Name = "tsmPrincipal";
-            this.tsmPrincipal.Size = new System.Drawing.Size(70, 22);
+            this.tsmPrincipal.Size = new System.Drawing.Size(180, 22);
             // 
             // tsmResultado
             // 
@@ -83,10 +84,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
-            this.ClientSize = new System.Drawing.Size(628, 527);
+            this.ClientSize = new System.Drawing.Size(636, 527);
             this.Controls.Add(this.mnsPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mnsPrincipal.ResumeLayout(false);
             this.mnsPrincipal.PerformLayout();
             this.ResumeLayout(false);

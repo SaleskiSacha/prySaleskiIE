@@ -27,6 +27,7 @@ namespace prySaleskiIE
         {
             frmPrincipal newobj = new frmPrincipal();
             newobj.ShowDialog();
+            this.Hide();
 
         }
 

@@ -21,11 +21,17 @@ namespace prySaleskiIE
         {
             frmView newobj = new frmView();
             newobj.ShowDialog();
+            this.Hide();
         }
 
         private void tsmResultado_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
