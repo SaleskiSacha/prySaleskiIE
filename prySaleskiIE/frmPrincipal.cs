@@ -26,12 +26,29 @@ namespace prySaleskiIE
 
         private void tsmResultado_Click(object sender, EventArgs e)
         {
-
+            frmEliminar newobj = new frmEliminar();
+            newobj.ShowDialog(this);
+            this.Hide();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void tsmConsulta_Click(object sender, EventArgs e)
+        {
+            frmAgregar newobj = new frmAgregar();
+            newobj.ShowDialog();
+            this.Hide();
+        }
+
+        private void tsmEditar_Click(object sender, EventArgs e)
+        {
+            frmEditar newobj = new frmEditar();
+            newobj.ShowDialog();
+            this.Hide();
+
         }
     }
 }

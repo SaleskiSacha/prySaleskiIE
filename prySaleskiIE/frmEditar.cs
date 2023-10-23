@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace prySaleskiIE
 {
-    public partial class frmGrilla : Form
+    public partial class frmEditar : Form
     {
-        public frmGrilla()
+        public frmEditar()
         {
             InitializeComponent();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal newobj = new frmPrincipal();
+            this.Hide();
+            newobj.ShowDialog();
+            
         }
     }
 }

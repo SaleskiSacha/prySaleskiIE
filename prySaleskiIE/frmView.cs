@@ -81,8 +81,8 @@ namespace prySaleskiIE
 
             string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
             string NombreArchivo = treeView1.SelectedNode.Text;
-            info = new DirectoryInfo(@"../../Resources/Proveedores, aseguradores");
-            string ruta = info.FullName;
+            info = new DirectoryInfo(@"../../Resources/");
+            string ruta = info.FullName + Archivo;
 
 
             try
@@ -130,6 +130,13 @@ namespace prySaleskiIE
         private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal newobj = new frmPrincipal();
+            this.Hide();
+            newobj.ShowDialog();
         }
     }
 }

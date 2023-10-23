@@ -25,9 +25,18 @@ namespace prySaleskiIE
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            frmPrincipal newobj = new frmPrincipal();
-            newobj.ShowDialog();
-            this.Hide();
+            if (txtUsuario.Text == "Usuario" && txtContraseña.Text == "123")
+            {
+                frmPrincipal newobj = new frmPrincipal();
+                newobj.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                txtUsuario.Clear();
+                txtContraseña.Clear();
+                MessageBox.Show("Datos incorrectos");
+            }
 
         }
 
@@ -45,7 +54,7 @@ namespace prySaleskiIE
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -34,6 +34,7 @@
             this.tsmPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,11 +42,12 @@
             // 
             this.mnsPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmDatos,
+            this.tsmConsulta,
             this.tsmResultado,
-            this.tsmConsulta});
+            this.tsmEditar});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(636, 29);
+            this.mnsPrincipal.Size = new System.Drawing.Size(673, 29);
             this.mnsPrincipal.TabIndex = 1;
             this.mnsPrincipal.Text = "menuStrip1";
             // 
@@ -78,13 +80,22 @@
             this.tsmConsulta.Name = "tsmConsulta";
             this.tsmConsulta.Size = new System.Drawing.Size(177, 25);
             this.tsmConsulta.Text = "Registro de Proveedor";
+            this.tsmConsulta.Click += new System.EventHandler(this.tsmConsulta_Click);
+            // 
+            // tsmEditar
+            // 
+            this.tsmEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tsmEditar.Name = "tsmEditar";
+            this.tsmEditar.Size = new System.Drawing.Size(160, 25);
+            this.tsmEditar.Text = "Editar un Proveedor";
+            this.tsmEditar.Click += new System.EventHandler(this.tsmEditar_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
-            this.ClientSize = new System.Drawing.Size(636, 527);
+            this.ClientSize = new System.Drawing.Size(673, 527);
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
@@ -105,5 +116,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmPrincipal;
         private System.Windows.Forms.ToolStripMenuItem tsmConsulta;
         private System.Windows.Forms.ToolStripMenuItem tsmResultado;
+        private System.Windows.Forms.ToolStripMenuItem tsmEditar;
     }
 }
