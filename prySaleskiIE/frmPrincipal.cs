@@ -45,9 +45,24 @@ namespace prySaleskiIE
 
         private void tsmEditar_Click(object sender, EventArgs e)
         {
-            frmEditar newobj = new frmEditar();
+            frmABM newobj = new frmABM();
             newobj.ShowDialog();
             this.Hide();
+
+        }
+
+        private void Socios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnsPrincipal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
         }
     }

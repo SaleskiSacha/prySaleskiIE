@@ -32,9 +32,10 @@
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPrincipal = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,14 +43,16 @@
             // 
             this.mnsPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmDatos,
-            this.tsmConsulta,
+            this.tsmEditar,
+            this.toolStripMenuItem1,
             this.tsmResultado,
-            this.tsmEditar});
+            this.toolStripMenuItem2});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
             this.mnsPrincipal.Size = new System.Drawing.Size(673, 29);
             this.mnsPrincipal.TabIndex = 1;
             this.mnsPrincipal.Text = "menuStrip1";
+            this.mnsPrincipal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnsPrincipal_ItemClicked);
             // 
             // tsmDatos
             // 
@@ -64,7 +67,15 @@
             // tsmPrincipal
             // 
             this.tsmPrincipal.Name = "tsmPrincipal";
-            this.tsmPrincipal.Size = new System.Drawing.Size(180, 22);
+            this.tsmPrincipal.Size = new System.Drawing.Size(70, 22);
+            // 
+            // tsmEditar
+            // 
+            this.tsmEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tsmEditar.Name = "tsmEditar";
+            this.tsmEditar.Size = new System.Drawing.Size(55, 25);
+            this.tsmEditar.Text = "ABM";
+            this.tsmEditar.Click += new System.EventHandler(this.tsmEditar_Click);
             // 
             // tsmResultado
             // 
@@ -74,21 +85,19 @@
             this.tsmResultado.Text = "Eliminar un Proveedor";
             this.tsmResultado.Click += new System.EventHandler(this.tsmResultado_Click);
             // 
-            // tsmConsulta
+            // toolStripMenuItem1
             // 
-            this.tsmConsulta.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tsmConsulta.Name = "tsmConsulta";
-            this.tsmConsulta.Size = new System.Drawing.Size(177, 25);
-            this.tsmConsulta.Text = "Registro de Proveedor";
-            this.tsmConsulta.Click += new System.EventHandler(this.tsmConsulta_Click);
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 25);
+            this.toolStripMenuItem1.Text = "Registro de Proveedor";
             // 
-            // tsmEditar
+            // toolStripMenuItem2
             // 
-            this.tsmEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tsmEditar.Name = "tsmEditar";
-            this.tsmEditar.Size = new System.Drawing.Size(160, 25);
-            this.tsmEditar.Text = "Editar un Proveedor";
-            this.tsmEditar.Click += new System.EventHandler(this.tsmEditar_Click);
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(55, 25);
+            this.toolStripMenuItem2.Text = "ABM";
             // 
             // frmPrincipal
             // 
@@ -114,8 +123,9 @@
         private System.Windows.Forms.MenuStrip mnsPrincipal;
         private System.Windows.Forms.ToolStripMenuItem tsmDatos;
         private System.Windows.Forms.ToolStripMenuItem tsmPrincipal;
-        private System.Windows.Forms.ToolStripMenuItem tsmConsulta;
         private System.Windows.Forms.ToolStripMenuItem tsmResultado;
         private System.Windows.Forms.ToolStripMenuItem tsmEditar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

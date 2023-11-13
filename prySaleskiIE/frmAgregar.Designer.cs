@@ -50,8 +50,8 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mrcElegir = new System.Windows.Forms.GroupBox();
-            this.btnDestino = new System.Windows.Forms.Button();
             this.lblDestino = new System.Windows.Forms.Label();
+            this.btnDestino = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.mrcElegir.SuspendLayout();
             this.SuspendLayout();
@@ -283,16 +283,6 @@
             this.mrcElegir.TabStop = false;
             this.mrcElegir.Text = "Elegir carpeta de Destino";
             // 
-            // btnDestino
-            // 
-            this.btnDestino.Location = new System.Drawing.Point(16, 29);
-            this.btnDestino.Name = "btnDestino";
-            this.btnDestino.Size = new System.Drawing.Size(107, 23);
-            this.btnDestino.TabIndex = 81;
-            this.btnDestino.Text = "Destino";
-            this.btnDestino.UseVisualStyleBackColor = true;
-            this.btnDestino.Click += new System.EventHandler(this.btnDestino_Click);
-            // 
             // lblDestino
             // 
             this.lblDestino.AutoSize = true;
@@ -302,6 +292,16 @@
             this.lblDestino.TabIndex = 82;
             this.lblDestino.Text = "Carpeta seleccionada:";
             this.lblDestino.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnDestino
+            // 
+            this.btnDestino.Location = new System.Drawing.Point(16, 34);
+            this.btnDestino.Name = "btnDestino";
+            this.btnDestino.Size = new System.Drawing.Size(107, 23);
+            this.btnDestino.TabIndex = 81;
+            this.btnDestino.Text = "Destino";
+            this.btnDestino.UseVisualStyleBackColor = true;
+            this.btnDestino.Click += new System.EventHandler(this.btnDestino_Click);
             // 
             // frmAgregar
             // 
