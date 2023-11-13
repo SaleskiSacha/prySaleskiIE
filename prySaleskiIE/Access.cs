@@ -46,6 +46,8 @@ namespace prySaleskiIE
         {
             comandoBD = new OleDbCommand();
 
+            //conexionBD.Open();
+
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             comandoBD.CommandText = "SOCIOS";
