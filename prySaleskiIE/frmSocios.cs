@@ -26,5 +26,17 @@ namespace prySaleskiIE
             objBD.ConectarBD();
             objBD.traerDatos(dgvMostrar);
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            objBD.BuscarPorId(txtID.Text, dgvMostrar);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal();
+            this.Hide();
+            frmPrincipal.Show();
+        }
     }
 }

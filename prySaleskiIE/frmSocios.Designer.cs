@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSocios));
             this.mrcDgv = new System.Windows.Forms.GroupBox();
+            this.dgvMostrar = new System.Windows.Forms.DataGridView();
             this.mrcBusqueda = new System.Windows.Forms.GroupBox();
+            this.lblIngresarID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dgvMostrar = new System.Windows.Forms.DataGridView();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.lblIngresarID = new System.Windows.Forms.Label();
             this.mrcDgv.SuspendLayout();
-            this.mrcBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).BeginInit();
+            this.mrcBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // mrcDgv
@@ -50,6 +50,15 @@
             this.mrcDgv.TabIndex = 0;
             this.mrcDgv.TabStop = false;
             this.mrcDgv.Text = "Datos Socios";
+            // 
+            // dgvMostrar
+            // 
+            this.dgvMostrar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrar.Location = new System.Drawing.Point(6, 19);
+            this.dgvMostrar.Name = "dgvMostrar";
+            this.dgvMostrar.Size = new System.Drawing.Size(624, 548);
+            this.dgvMostrar.TabIndex = 2;
             // 
             // mrcBusqueda
             // 
@@ -63,6 +72,22 @@
             this.mrcBusqueda.TabStop = false;
             this.mrcBusqueda.Text = "Busqueda Rapida";
             // 
+            // lblIngresarID
+            // 
+            this.lblIngresarID.AutoSize = true;
+            this.lblIngresarID.Location = new System.Drawing.Point(6, 45);
+            this.lblIngresarID.Name = "lblIngresarID";
+            this.lblIngresarID.Size = new System.Drawing.Size(108, 13);
+            this.lblIngresarID.TabIndex = 2;
+            this.lblIngresarID.Text = "Ingrese Identificacion";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(119, 42);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 1;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(0, 90);
@@ -71,6 +96,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnVolver
             // 
@@ -80,31 +106,7 @@
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
-            // 
-            // dgvMostrar
-            // 
-            this.dgvMostrar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Location = new System.Drawing.Point(6, 19);
-            this.dgvMostrar.Name = "dgvMostrar";
-            this.dgvMostrar.Size = new System.Drawing.Size(624, 548);
-            this.dgvMostrar.TabIndex = 2;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(119, 42);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 1;
-            // 
-            // lblIngresarID
-            // 
-            this.lblIngresarID.AutoSize = true;
-            this.lblIngresarID.Location = new System.Drawing.Point(6, 45);
-            this.lblIngresarID.Name = "lblIngresarID";
-            this.lblIngresarID.Size = new System.Drawing.Size(108, 13);
-            this.lblIngresarID.TabIndex = 2;
-            this.lblIngresarID.Text = "Ingrese Identificacion";
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmSocios
             // 
@@ -119,9 +121,9 @@
             this.Text = "frmSocios";
             this.Load += new System.EventHandler(this.frmSocios_Load);
             this.mrcDgv.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();
             this.mrcBusqueda.ResumeLayout(false);
             this.mrcBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();
             this.ResumeLayout(false);
 
         }

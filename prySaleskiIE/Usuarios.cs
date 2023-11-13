@@ -42,7 +42,7 @@ namespace prySaleskiIE
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "USERS";
+            comandoBD.CommandText = "USUARIOS";
 
             lectorBD = comandoBD.ExecuteReader();
 
