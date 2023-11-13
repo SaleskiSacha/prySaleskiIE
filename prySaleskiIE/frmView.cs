@@ -87,7 +87,7 @@ namespace prySaleskiIE
 
             try
             {
-
+                ruta = (@"../../Resources/");
                 StreamReader sr = new StreamReader(ruta + "\\" + Archivo);
 
                 leerLinea = sr.ReadLine();

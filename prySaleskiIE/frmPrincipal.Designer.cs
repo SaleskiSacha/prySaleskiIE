@@ -33,9 +33,9 @@
             this.tsmDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEditar = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
+            this.SOCIOS = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +46,10 @@
             this.tsmEditar,
             this.toolStripMenuItem1,
             this.tsmResultado,
-            this.toolStripMenuItem2});
+            this.SOCIOS});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(673, 29);
+            this.mnsPrincipal.Size = new System.Drawing.Size(669, 29);
             this.mnsPrincipal.TabIndex = 1;
             this.mnsPrincipal.Text = "menuStrip1";
             this.mnsPrincipal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnsPrincipal_ItemClicked);
@@ -67,7 +67,7 @@
             // tsmPrincipal
             // 
             this.tsmPrincipal.Name = "tsmPrincipal";
-            this.tsmPrincipal.Size = new System.Drawing.Size(70, 22);
+            this.tsmPrincipal.Size = new System.Drawing.Size(180, 22);
             // 
             // tsmEditar
             // 
@@ -77,6 +77,13 @@
             this.tsmEditar.Text = "ABM";
             this.tsmEditar.Click += new System.EventHandler(this.tsmEditar_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 25);
+            this.toolStripMenuItem1.Text = "Registro de Proveedor";
+            // 
             // tsmResultado
             // 
             this.tsmResultado.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -85,26 +92,19 @@
             this.tsmResultado.Text = "Eliminar un Proveedor";
             this.tsmResultado.Click += new System.EventHandler(this.tsmResultado_Click);
             // 
-            // toolStripMenuItem1
+            // SOCIOS
             // 
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 25);
-            this.toolStripMenuItem1.Text = "Registro de Proveedor";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(55, 25);
-            this.toolStripMenuItem2.Text = "ABM";
+            this.SOCIOS.Name = "SOCIOS";
+            this.SOCIOS.Size = new System.Drawing.Size(60, 25);
+            this.SOCIOS.Text = "SOCIOS";
+            this.SOCIOS.Click += new System.EventHandler(this.SOCIOS_Click_1);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
-            this.ClientSize = new System.Drawing.Size(673, 527);
+            this.ClientSize = new System.Drawing.Size(669, 527);
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
@@ -126,6 +126,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmResultado;
         private System.Windows.Forms.ToolStripMenuItem tsmEditar;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem SOCIOS;
     }
 }

@@ -80,7 +80,7 @@ namespace prySaleskiIE
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "USERS";
+            comandoBD.CommandText = "USUARIOS";
 
             lectorBD = comandoBD.ExecuteReader();
 
@@ -127,7 +127,7 @@ namespace prySaleskiIE
         public void BuscarPorId(string codigo, DataGridView dgvMostrar)
         {
             comandoBD = new OleDbCommand();
-            //bandera=false;
+            
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             comandoBD.CommandText = "SOCIOS";
@@ -135,7 +135,7 @@ namespace prySaleskiIE
             lectorBD = comandoBD.ExecuteReader();
 
 
-            if (lectorBD.HasRows) //SI TIENE FILAS
+            if (lectorBD.HasRows) 
             {
                 bool bandera = false;
                 if (codigo == "")
@@ -145,9 +145,9 @@ namespace prySaleskiIE
                 }
                 else
                 {
-                    while (lectorBD.Read()) //mientras pueda leer que ejecute el sig codigo
+                    while (lectorBD.Read()) 
                     {
-                        if ((lectorBD[0].ToString()) == codigo) //Si el codigo ingresado por pantalla es igual a la primera posicion del registro
+                        if ((lectorBD[0].ToString()) == codigo) 
                         {
 
                             dgvMostrar.Rows.Clear();

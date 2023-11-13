@@ -65,5 +65,19 @@ namespace prySaleskiIE
         {
 
         }
+
+        private void tsmDatosSOCIOS_Click(object sender, EventArgs e)
+        {
+            frmSocios newobj = new frmSocios();
+            newobj.ShowDialog();
+            this.Hide();
+        }
+
+        private void SOCIOS_Click_1(object sender, EventArgs e)
+        {
+            frmSocios socios = new frmSocios();
+            socios.ShowDialog();
+            this.Hide();
+        }
     }
 }
