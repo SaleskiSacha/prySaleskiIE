@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmDatos = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +37,14 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmResultado = new System.Windows.Forms.ToolStripMenuItem();
             this.SOCIOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.timerHora = new System.Windows.Forms.Timer(this.components);
+            this.barraDeEstado = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblUsuarioTS = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.mnsPrincipal.SuspendLayout();
+            this.barraDeEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnsPrincipal
@@ -99,12 +107,59 @@
             this.SOCIOS.Text = "SOCIOS";
             this.SOCIOS.Click += new System.EventHandler(this.SOCIOS_Click_1);
             // 
+            // timerHora
+            // 
+            this.timerHora.Enabled = true;
+            this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
+            // 
+            // barraDeEstado
+            // 
+            this.barraDeEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus,
+            this.lblUsuarioTS});
+            this.barraDeEstado.Location = new System.Drawing.Point(0, 505);
+            this.barraDeEstado.Name = "barraDeEstado";
+            this.barraDeEstado.Size = new System.Drawing.Size(638, 22);
+            this.barraDeEstado.TabIndex = 14;
+            this.barraDeEstado.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(28, 17);
+            this.lblStatus.Text = "BD: ";
+            // 
+            // lblUsuarioTS
+            // 
+            this.lblUsuarioTS.Name = "lblUsuarioTS";
+            this.lblUsuarioTS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUsuarioTS.Size = new System.Drawing.Size(0, 17);
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Location = new System.Drawing.Point(24, 109);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(0, 13);
+            this.lblHora.TabIndex = 15;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(24, 138);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(0, 13);
+            this.lblFecha.TabIndex = 16;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
             this.ClientSize = new System.Drawing.Size(638, 527);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblHora);
+            this.Controls.Add(this.barraDeEstado);
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
@@ -113,6 +168,8 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mnsPrincipal.ResumeLayout(false);
             this.mnsPrincipal.PerformLayout();
+            this.barraDeEstado.ResumeLayout(false);
+            this.barraDeEstado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +184,11 @@
         private System.Windows.Forms.ToolStripMenuItem tsmEditar;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem SOCIOS;
+        private System.Windows.Forms.Timer timerHora;
+        private System.Windows.Forms.StatusStrip barraDeEstado;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.ToolStripStatusLabel lblUsuarioTS;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
     }
 }

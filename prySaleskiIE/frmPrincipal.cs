@@ -12,6 +12,7 @@ namespace prySaleskiIE
 {
     public partial class frmPrincipal : Form
     {
+        Access objBaseDatos;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -41,7 +42,13 @@ namespace prySaleskiIE
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            objBaseDatos = new Access();
+            objBaseDatos.ConectarBD();
+
+            lblStatus.Text = objBaseDatos.estadoDeConexion;
+
+            lblStatus.BackColor = Color.Green;
+            lblStatus.ForeColor = Color.White;
         }
 
         private void tsmConsulta_Click(object sender, EventArgs e)
@@ -86,6 +93,12 @@ namespace prySaleskiIE
             frmSocios socios = new frmSocios();
             socios.ShowDialog();
             this.Hide();
+        }
+
+        private void timerHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
