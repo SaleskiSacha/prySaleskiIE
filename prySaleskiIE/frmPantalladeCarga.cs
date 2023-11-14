@@ -15,8 +15,16 @@ namespace prySaleskiIE
         public frmPantalladeCarga()
         {
             InitializeComponent();
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
-
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
 

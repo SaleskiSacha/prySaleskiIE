@@ -19,7 +19,8 @@ namespace prySaleskiIE
             InitializeComponent();
             LlenarTreeView();
 
-
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
         
         private void LlenarTreeView()
@@ -66,7 +67,13 @@ namespace prySaleskiIE
                 nodeToAddTo.Nodes.Add(aNode);
             }
         }
-       
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             

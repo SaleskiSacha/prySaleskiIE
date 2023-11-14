@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEliminar));
             this.btnVolver = new System.Windows.Forms.Button();
             this.mrcEliminar = new System.Windows.Forms.GroupBox();
-            this.btnArchivoEliminar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblRuta = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnArchivoEliminar = new System.Windows.Forms.Button();
             this.mrcEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,15 +59,14 @@
             this.mrcEliminar.TabStop = false;
             this.mrcEliminar.Text = "ELIMINAR";
             // 
-            // btnArchivoEliminar
+            // lblRuta
             // 
-            this.btnArchivoEliminar.Location = new System.Drawing.Point(32, 34);
-            this.btnArchivoEliminar.Name = "btnArchivoEliminar";
-            this.btnArchivoEliminar.Size = new System.Drawing.Size(135, 34);
-            this.btnArchivoEliminar.TabIndex = 3;
-            this.btnArchivoEliminar.Text = "Seleccionar Archivo";
-            this.btnArchivoEliminar.UseVisualStyleBackColor = true;
-            this.btnArchivoEliminar.Click += new System.EventHandler(this.btnArchivoEliminar_Click);
+            this.lblRuta.AutoSize = true;
+            this.lblRuta.Location = new System.Drawing.Point(29, 83);
+            this.lblRuta.Name = "lblRuta";
+            this.lblRuta.Size = new System.Drawing.Size(112, 13);
+            this.lblRuta.TabIndex = 5;
+            this.lblRuta.Text = "Archivo seleccionado:";
             // 
             // btnEliminar
             // 
@@ -79,14 +78,15 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblRuta
+            // btnArchivoEliminar
             // 
-            this.lblRuta.AutoSize = true;
-            this.lblRuta.Location = new System.Drawing.Point(29, 83);
-            this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(112, 13);
-            this.lblRuta.TabIndex = 5;
-            this.lblRuta.Text = "Archivo seleccionado:";
+            this.btnArchivoEliminar.Location = new System.Drawing.Point(32, 34);
+            this.btnArchivoEliminar.Name = "btnArchivoEliminar";
+            this.btnArchivoEliminar.Size = new System.Drawing.Size(135, 34);
+            this.btnArchivoEliminar.TabIndex = 3;
+            this.btnArchivoEliminar.Text = "Seleccionar Archivo";
+            this.btnArchivoEliminar.UseVisualStyleBackColor = true;
+            this.btnArchivoEliminar.Click += new System.EventHandler(this.btnArchivoEliminar_Click);
             // 
             // frmEliminar
             // 
@@ -98,6 +98,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEliminar";
             this.Text = "Eliminar un Proveedor";
+            this.Load += new System.EventHandler(this.frmEliminar_Load);
             this.mrcEliminar.ResumeLayout(false);
             this.mrcEliminar.PerformLayout();
             this.ResumeLayout(false);

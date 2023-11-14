@@ -16,9 +16,19 @@ namespace prySaleskiIE
         public frmABM()
         {
             InitializeComponent();
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
         string rutaCarpeta;
         FolderBrowserDialog fbD = new FolderBrowserDialog();
+
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmPrincipal newobj = new frmPrincipal();
@@ -62,6 +72,11 @@ namespace prySaleskiIE
             txtJurisdiccion.Clear();
             txtDireccion.Clear();
             txtLiquidador.Clear();
+        }
+
+        private void frmABM_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

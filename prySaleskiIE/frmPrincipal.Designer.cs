@@ -49,7 +49,7 @@
             this.SOCIOS});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(669, 29);
+            this.mnsPrincipal.Size = new System.Drawing.Size(638, 29);
             this.mnsPrincipal.TabIndex = 1;
             this.mnsPrincipal.Text = "menuStrip1";
             this.mnsPrincipal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnsPrincipal_ItemClicked);
@@ -67,7 +67,7 @@
             // tsmPrincipal
             // 
             this.tsmPrincipal.Name = "tsmPrincipal";
-            this.tsmPrincipal.Size = new System.Drawing.Size(180, 22);
+            this.tsmPrincipal.Size = new System.Drawing.Size(70, 22);
             // 
             // tsmEditar
             // 
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySaleskiIE.Properties.Resources.pngtree_insurance_logo_vector_image_80269;
-            this.ClientSize = new System.Drawing.Size(669, 527);
+            this.ClientSize = new System.Drawing.Size(638, 527);
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";

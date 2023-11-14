@@ -13,11 +13,20 @@ namespace prySaleskiIE
     public partial class Login : Form
     {
        
+
         public Login()
         {
             InitializeComponent();
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
-
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +46,7 @@ namespace prySaleskiIE
                 txtContraseña.Clear();
                 MessageBox.Show("Datos incorrectos");
             }
-
+            
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)

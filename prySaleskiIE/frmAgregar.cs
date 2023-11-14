@@ -17,6 +17,8 @@ namespace prySaleskiIE
         public frmAgregar()
         {
             InitializeComponent();
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
        
         string rutaCarpeta;
@@ -48,7 +50,13 @@ namespace prySaleskiIE
             sw.Dispose();
             MessageBox.Show("Se ha cargado el archivo correctamente");
         }
-
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
         private void frmAgregar_Load(object sender, EventArgs e)
         {
 

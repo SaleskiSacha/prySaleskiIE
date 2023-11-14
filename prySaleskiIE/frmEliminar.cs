@@ -17,6 +17,15 @@ namespace prySaleskiIE
         public frmEliminar()
         {
             InitializeComponent();
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
+        }
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
         }
         OpenFileDialog ofD = new OpenFileDialog();
         string rutaArchivo = string.Empty;
@@ -65,6 +74,11 @@ namespace prySaleskiIE
 
 
             }
+        }
+
+        private void frmEliminar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Data.OleDb;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data;
 
 namespace prySaleskiIE
 {
@@ -15,14 +16,16 @@ namespace prySaleskiIE
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
-
-
+        
+        DataSet objDS;
 
         string cadenaDeConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\EL_CLUB.accdb";
 
         public string estadoDeConexion = "";
         public string datosTabla = "";
+        string varEstado;
         int varContador;
+        string varSexo;
         public Access()
         {
             varContador = 0;
@@ -61,15 +64,34 @@ namespace prySaleskiIE
             grilla.Columns.Add("Edad", "Edad");
             grilla.Columns.Add("Ingreso", "Ingreso");
             grilla.Columns.Add("Puntaje", "Puntaje");
+            grilla.Columns.Add("Estado", "Estado");
 
 
-
-            if (lectorBD.HasRows)
+             if (lectorBD.HasRows)
             {
                 while (lectorBD.Read())
                 {
-                    datosTabla += "-" + lectorBD[0];
-                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[5], lectorBD[6]);
+                    //cargo la grilla con valores de activo/inactivo para que no aparezca true o false
+                    if ((bool)lectorBD[8] == true)
+                    {
+                        varEstado = "Activo";
+                    }
+                    else
+                    {
+                        varEstado = "Inactivo";
+                    }
+
+                    //cargo la grilla con valores de Masculino/Femenino para que no aparezca true o false
+                    if ((bool)lectorBD[5] == true)
+                    {
+                        varSexo = "Masculino";
+                    }
+                    else
+                    {
+                        varSexo = "Femenino";
+                    }
+
+                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], varSexo, lectorBD[6], lectorBD[7], varEstado);
                 }
             }
         }
@@ -113,6 +135,80 @@ namespace prySaleskiIE
                     Application.Exit();
                 }
             }
+        }
+
+        public void ModificarEstadoSocio(int id)
+        {
+
+
+            OleDbCommand comandoBD = new OleDbCommand();
+            OleDbDataAdapter objda;
+            DataSet objds = new DataSet();
+
+            try
+            {
+                conexionBD = new OleDbConnection();
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+
+            // establecer las propiedades al objeto comando
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = CommandType.TableDirect;
+            comandoBD.CommandText = "SOCIOS";
+
+            // crear el objeto DataAdapter pasando como parámetro el objeto comando que queremos vincular
+            objda = new OleDbDataAdapter(comandoBD);
+
+            // ejecutar la lectura de la tabla y almacenarsu contenido en el dataAdapter
+
+            objda.Fill(objds, "SOCIOS");
+
+
+            // obtenemos una referencia a la tabla de SOCIOS
+            DataTable dt = objds.Tables["SOCIOS"];
+
+            // recorrer los registros de la tabla
+
+            foreach (DataRow registro in dt.Rows)
+            { 
+
+                if ((int)registro["CODIGO_SOCIO"] == id)
+                {
+                    
+                    registro.BeginEdit();
+
+                    //  nuevo valor al estado del socio 
+                    if ((bool)registro["ESTADO"])
+                    {
+                        registro["ESTADO"] = false;
+                    }
+                    else
+                    {
+                        registro["ESTADO"] = true;
+                    }
+
+                    
+                    registro.EndEdit();
+                    break;
+                }
+
+
+            }
+            // creo OledBCommandBuilder pasando como parámetro el DataAdapter
+            OleDbCommandBuilder cb = new OleDbCommandBuilder(objda);
+
+            // ACTUALIZO LA BASE
+
+            objda.Update(objds, "SOCIOS");
+
+            MessageBox.Show("Estado Modificado");
         }
 
 

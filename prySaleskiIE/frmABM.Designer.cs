@@ -314,6 +314,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmABM";
             this.Text = "AMB";
+            this.Load += new System.EventHandler(this.frmABM_Load);
             this.mrcElegir.ResumeLayout(false);
             this.mrcElegir.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -15,8 +15,16 @@ namespace prySaleskiIE
         public frmPrincipal()
         {
             InitializeComponent();
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
-
+        public static void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
         private void tsmDatos_Click(object sender, EventArgs e)
         {
             frmView newobj = new frmView();
